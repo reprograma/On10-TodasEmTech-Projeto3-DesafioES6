@@ -1,0 +1,168 @@
+* {
+  background-color: #F8F8F8;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+.navbar{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  width: 100%; 
+  height: 66px;
+}
+
+.navbar__logo{
+  background-color: transparent;
+  display: flex;
+  size: 32px;
+  line-height: 40px;
+  justify-content: left;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 2%;
+  
+}
+
+.navbar__logo-github, .navbar__logo-search{
+  background-color: transparent;
+  padding: none;
+}
+
+.navbar__logo-github{
+  color: #EC9B69;
+}
+
+.navbar__logo-search{
+  color: #313131;
+}
+
+.container__input{
+  border: 1px solid #BEBEBE;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  margin-right: 20px;
+  border-radius: 10px;
+  width: 403px;
+  height: 10px;
+  left: 968px;
+  top: 13px;
+}
+
+.navbar__input{
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+
+}
+
+.navbar__search{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/icon-search.png);
+  border-style: none;
+  border-radius: 2px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+
+}
+
+.user__profile{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.user__image{
+  width: 252px;
+  height: 252px;
+  border-radius: 8px;
+
+}
+
+.user__name{
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #EC9B69;
+}
+
+.user__username{
+  font-size: 14px;
+  font-style: normal;
+  line-height: 17px;
+  margin-top: 10px;
+}
+
+.user__description{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.5px;
+  margin-top: 30px;
+}
+
+.user__stats{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.user__followers, .user__repository{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.user__followers-icon, .user__repository-icon{
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+}
+
+.user__followers-number, .user__repository-number{
+  font-size: 14px;
+  background-color: transparent;
+}
+
+.footer{
+  text-align: center;
+  width: 100%;
+  height: 66px;
+  background-color: #fff;
+}
+
+.footer__text-credits, .footer__text{
+  color: #313131;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.footer__text{
+  color: #EC9B69;
+}
+
+@media screen {
+  
+}
