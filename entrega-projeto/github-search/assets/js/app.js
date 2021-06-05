@@ -75,7 +75,11 @@ const cleanCard = ()=> {
   tagNumeroSeguidores.innerHTML = ""; 
   tagImgRepositorios.src= "";
   tagNumeroRepositorios.innerHTML= "";
+  tituloUserNotFound.innerHTML = '';
+  subtituloUserNotFound.innerHTML = '';
+  imgUserNotFound.src ="";
 }
+
 
 const userNotFound = () => {
     tituloUserNotFound.innerHTML = 'Usuário não encontrado';
