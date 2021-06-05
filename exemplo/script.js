@@ -10,72 +10,68 @@ const apelidPersonagem = document.querySelector('#apelido');
 const niverPersonagem = document.querySelector('#niver');
 const mensagemErro = document.querySelector('.messagemErro');
 
-
 form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const nome = input.value.trim();
+    event.preventDefault();
+    const nome = input.value.trim();
 
-  if(nome){
-    getPersonagem(nome)
-  } else {
-    alert('Informe o nome do personagem');
-  }
+    if (nome) {
+        getPersonagem(nome)
+    } else {
+        alert('Informe o nome do personagem');
+    }
 })
 
-function replaceNome(nome){
-  let nomeModificado = ''
+function replaceNome(nome) {
+    let nomeModificado = ''
 
-  if(nome.includes(' ')){
-   nomeModificado = nome.replace(' ', '+')
-  } else {
-   nomeModificado = nome;
-  }
+    if (nome.includes(' ')) {
+        nomeModificado = nome.replace(' ', '+')
+    } else {
+        nomeModificado = nome;
+    }
 
-  return nomeModificado.toLocaleLowerCase();
+    return nomeModificado.toLocaleLowerCase();
 }
-
-
 
 const getPersonagem = (nome) => {
 
-  const nomeModificado = replaceNome(nome)
+    const nomeModificado = replaceNome(nome)
 
-  fetch(`${baseURL}/characters?name=${nomeModificado}`)
-  .then((resposta) => resposta.json())
-  .then((dados) => {
-    mensagemErro.textContent = '';
-    if(dados.length > 0){
+    fetch(`${baseURL}/characters?name=${nomeModificado}`)
+        .then((resposta) => resposta.json())
+        .then((dados) => {
+            mensagemErro.textContent = '';
+            if (dados.length > 0) {
 
-    const personagem = dados[0];
-    const { img, nickname, birthday, name } = personagem;
-    criarCard(img, nickname, birthday, name)
-    } else {
-      throw new Error()
-    }
-  }).catch(() => {
-    limparCard();
-    mensagemErro.textContent = 'Personagem não encontrado';
-  })
+                const personagem = dados[0];
+                const { img, nickname, birthday, name } = personagem;
+                criarCard(img, nickname, birthday, name)
+            } else {
+                throw new Error()
+            }
+        }).catch(() => {
+            limparCard();
+            mensagemErro.textContent = 'Personagem não encontrado';
+        })
 
 }
 
 const criarCard = (img, nome, apelido, niver) => {
- imgPersonagem.setAttribute('src', img);
- // imgPersonagem.src = img
- nomePersonagem.textContent = nome;
- // nomePersonagem.innerText = nome;
+    imgPersonagem.setAttribute('src', img);
+    // imgPersonagem.src = img
+    nomePersonagem.textContent = nome;
+    // nomePersonagem.innerText = nome;
 
- apelidPersonagem.textContent = `Apelido: ${apelido}`;
- niverPersonagem.textContent = `Aniversário: ${niver}`;
+    apelidPersonagem.textContent = `Apelido: ${apelido}`;
+    niverPersonagem.textContent = `Aniversário: ${niver}`;
 }
 
 const limparCard = () => {
-  imgPersonagem.src = ' ';
- nomePersonagem.textContent = '';
- apelidPersonagem.textContent = '';
- niverPersonagem.textContent = '';
+    imgPersonagem.src = ' ';
+    nomePersonagem.textContent = '';
+    apelidPersonagem.textContent = '';
+    niverPersonagem.textContent = '';
 }
-
 
 /*
 const exemploPokemon = () => {
