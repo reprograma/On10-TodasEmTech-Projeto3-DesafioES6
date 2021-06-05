@@ -82,7 +82,8 @@ const cleanCard = ()=> {
 
 
 const userNotFound = () => {
-    tituloUserNotFound.innerHTML = 'Usuário não encontrado';
+    cardUsuarioEncontrado.classList.replace('card', 'off')
+    tituloUserNotFound.innerHTML = 'Usuário não encontrado :(';
     subtituloUserNotFound.innerHTML = 'Pesquisar novamente!';
     imgUserNotFound.src ="../../img/not-found.svg";
 }
