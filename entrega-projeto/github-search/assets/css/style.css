@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background: #f8f8f8;
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    padding: 1rem 5rem 1rem 1rem;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    background: #ffff;
+    align-items: center;
+}
+
+.logo1 {
+    color: #EC9B69;
+    font-size: 2rem;
+    height: 100%;
+}
+
+.logo2 {
+    color: #313131;
+}
+
+form {
+    border: 1px solid #dad5d5;
+    padding: 4px;
+    border-radius: 7px;
+    display: flex;
+    width: 350px;
+}
+
+input {
+    border: none;
+    padding: 8px;
+    outline: none;
+    font-size: 14px;
+    width: 90%;
+    background: transparent;
+}
+
+input:hover {
+    background: #eca172ce;
+    transition: 0.7s;
+}
+
+.btn {
+    background: transparent;
+    border: none;
+}
+
+main {
+    padding: 3rem 2rem 2rem 2rem;
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background: #ffff;
+    position: fixed;
+    bottom: 0;
+    font-size: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    color: #817b7b;
+    letter-spacing: 0.8px;
+}
+
+.rodape-nome-alunas {
+    color: #EC9B69;
+    font-weight: bolder;
+}
+
+.off{
+    display:none;
+}
+
+.card {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
