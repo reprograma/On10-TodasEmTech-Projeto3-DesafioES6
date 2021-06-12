@@ -5,6 +5,15 @@ const baseURL = "https://api.github.com";
 const input = document.getElementById('input');
 const form = document.getElementById('form');
 
+
+const avatar = document.getElementById('avatar');
+const printName = document.getElementById('name');
+const printUserName = document.getElementById('user');
+const printBio = document.getElementById('bio');
+const printFollowers = document.getElementById('followers');
+const printRepo = document.getElementById('repo');
+const notFound = document.getElementById('notFound');
+
 //pegando nome do usuario
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -19,19 +28,22 @@ form.addEventListener('submit', (e) => {
 
 //buscando dados do usuario
 const getUser = (userName) => {
+    limparCard();
+
     fetch(`${baseURL}/users/${userName}`)
     .then((response) => {
+            console.log(response)
             if(response.ok===true){
                 return response.json();
             }else if(response.status === 404){
                 const imgNotFound = document.createElement("IMG");
                 imgNotFound.src = "../../../images/not-found.svg";
-                document.getElementById('notFound').appendChild(imgNotFound);
+                notFound.appendChild(imgNotFound);
                 throw new Error('user not found');
             }
             })
     .then((user) => {
-        console.log(user);
+        console.log('user',user);
         const userInfo = user;
         const {avatar_url, name, login, bio, followers, public_repos} = userInfo;
         createCard(avatar_url, name, login, bio, followers, public_repos);
@@ -44,37 +56,29 @@ const getUser = (userName) => {
 const createCard = (avatar_url, name, login, bio, followers, public_repos) => {
     const img = document.createElement("IMG");
     img.src = avatar_url;
-    document.getElementById('avatar').appendChild(img);
+    avatar.appendChild(img);
 
-    const printName = document.getElementById('name');
     printName.innerText = `${name}`;
 
-    const printUserName = document.getElementById('user');
     printUserName.innerText = `${login}`;
 
-    const printBio = document.getElementById('bio');
     printBio.innerText = `${bio}`;
 
-    const printFollowers = document.getElementById('followers');
     printFollowers.innerHTML = `<span style="color:#EC9B69" class="material-icons">people_outline</span><p>${followers}</p>`
 
-    const printRepo = document.getElementById('repo');
     printRepo.innerHTML = `<span style="color:#EC9B69" class="material-icons">collections_bookmark</span><p>${public_repos}</p>`
+
+    const mainDiv = document.getElementById("main");
+    mainDiv.className = 'show';
+
 }
 
-// fetch(`${baseURL}/characters?name=${nomeModificado}`)
-// .then((resposta) => resposta.json())
-// .then((dados) => {
-//   mensagemErro.textContent = '';
-//   if(dados.length > 0){
-
-//   const personagem = dados[0];
-//   const { img, nickname, birthday, name } = personagem;
-//   criarCard(img, nickname, birthday, name)
-//   } else {
-//     throw new Error()
-//   }
-// }).catch(() => {
-//   limparCard();
-//   mensagemErro.textContent = 'Personagem não encontrado';
-// })
+const limparCard = () => {
+    avatar.innerHTML = '';
+    notFound.innerHTML = '';
+    printName.innerText = '';
+    printUserName.innerText = '';
+    printBio.innerText = '';
+    printFollowers.innerHTML = '';
+    printRepo.innerHTML = '';
+}

@@ -92,8 +92,13 @@ footer p span{
 }
 
 main{
-    background-color: #f7f3f3;
-    padding-bottom: 1px;
+    display: none;
+}
+
+.show{
+    background-color: #f7f3f3 !important;
+    padding-bottom: 1px !important;
+    display: block;
 }
 
 .user__info{
