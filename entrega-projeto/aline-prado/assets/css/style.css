@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Quicksand, Arial, Helvetica, sans-serif;
+    background-color: #f8f8f8;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 > span, 
+p > a {
+    color: #EC9B69;
+}
+
+p > a {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.header__github-search {
+    width: 100vw;
+    height: 66px;
+    background-color: #ffffff;
+}
+
+.nav__github-search {    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1em;
+    align-items: center;
+}
+
+#username {
+    border-radius: 8px;
+    width: 200px;
+    height: 25px;
+    padding-left: 10px;
+    border: none;
+}
+
+#username:focus {
+    outline: none;
+}
+
+.search {
+    margin-right: 1em;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #BEBEBE;
+    border-radius: 8px;
+    width: 225px;
+    height: 28px;
+}
+
+
+.button__github-search {
+    background-color: #ffffff;
+    border: none;
+    margin-right: 5em;
+    cursor: pointer;
+}
+
+.material-icons-outlined {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+.profile {
+    margin: auto;
+}
+
+.user__image {
+    width: 180px;
+    height: auto;
+}
+
+.image__user {
+    width: 150px;
+    height: 150px;
+}
+
+.user__name {
+    color: #EC9B69;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.user__username {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #313131;
+    opacity: 50%;
+}
+
+.user__bio {
+    font-size: 14px;
+    font-weight: 400;
+    color: #313131;
+    opacity: 50%;
+    padding: .5rem 0;
+    margin: 0;
+}
+
+.badge {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ffffff;
+    margin-right: .5rem;
+    border-radius: 5px;
+    padding-right:.5rem;
+    padding: .2rem ;
+    font-size: 14px;
+    font-weight: 700;
+    color: #C6C6C6;
+}
+
+.badges {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+.icon__profile {
+    color: #EC9B69;
+    margin: 0;
+    margin-right: .3rem;
+    padding: 0;
+}
+
+.not-found {
+    text-align: center;
+}
+
+.not-found__image {
+    width: 450px;
+    padding: 0;
+    margin: 0;
+}
+
+.title {
+    font-size: 36px;
+    color: #EC9B69;
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.subtitle {
+    opacity: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #ffffff;
+    margin-top: auto;
+    text-align: center;
+    padding: 1rem;
+}
+
