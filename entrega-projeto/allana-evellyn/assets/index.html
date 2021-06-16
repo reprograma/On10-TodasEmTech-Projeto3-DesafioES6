@@ -22,47 +22,44 @@
       </div>
 
       <!--barra de pesquisa-->
-      <div class="container__input">
-        <input placeholder="Digite o usuário" type="text" class="navbar__input" id="navbar__input">
-        <button class="navbar__search" id="navbar__search"></button>
-      </div>
+      <form class="container__input" id="form">
+        <input placeholder="Digite o usuário" type="text" class="navbar__input" id="search">
+        <button class="navbar__search" type="submit" id="navbar__search"></button>
+      </form>
       
     
 
 </nav>
+
 <main>
 
-  <div class="user__profile">
+  <article class="user__profile">
 
     <!--foto do usuario-->
     <div class="user__image">
-      <img src="./img/img-user.jfif" alt="" class="user__image">
+      <img id="image" alt="" class="user__image">
     </div>
     
     <!--informações pessoais-->
     <div class="user__infos">
-      <p class="user__name">Allana Evellyn</p>
-      <p class="user__username">allanina</p>
-    </div>
-
-    <!--descrição-->
-    <div class="user__description">
-      <p class="user__description-profile">System's analysis and development student @ifpe-paulista, front-end development student @reprograma<!--aqui vamos puxar as infos da api-->
-      </p>
+      <p id="name" class="user__name"></p>
+      <p id="username" class="user__username"></p>
+      <p id ="description" class="user__description-profile"></p>
     </div>
 
     <!--informações de repositórios e seguidores-->
     <div class="user__stats">
       <div class="user__followers">
         <img src="./img/icon-followers (2).png" alt="" class="user__followers-icon">
-        <p class="user__followers-number">21</p> <!--vamos puxar da api-->
+        <p id="followers"></p> <!--vamos puxar da api-->
       </div>
   
       <div class="user__repository">
         <img src="./img/icon-repository.png" alt="" class="user__repository-icon">
-        <p class="user__repository-number">21</p> <!--vamos puxar da api-->
+        <p id="repositories" class="user__repository-number"></p> <!--vamos puxar da api-->
       </div>      
-    
+    </div>
+  </article>
   </div>
   
   </div>
@@ -73,7 +70,7 @@
 
 
 <footer class="footer">
-  <h1 class="footer__text-credits">Desenvolvido por</p><a href="https://github.com/allanina" class="footer__text"> Allana Evellyn</a>
+  <h1 class="footer__text-credits">Desenvolvido por</p><a href="https://github.com/allanina" class="footer__text"> Allana Evellyn</a> e </p><a href="https://github.com/TEUUSUARIOAQUI" class="footer__text"> Nadja </a>
 </footer>
 
 <script src="./js/app.js"></script>
