@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="./css/style.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
+  
+  <title>Github Search</title>
+</head>
+
+
+<body>
+<!--barra de navegação-->
+
+<nav class="navbar">
+  
+      <!--logo-->
+      <div class="navbar__logo">
+        <h1 class="navbar__logo-github">Github</h1><h1 class="navbar__logo-search">Search</h1>
+      </div>
+
+      <!--barra de pesquisa-->
+      <form class="container__input" id="form">
+        <input placeholder="Digite o usuário" type="text" class="navbar__input" id="search">
+        <button class="navbar__search" type="submit" id="navbar__search"></button>
+      </form>
+      
+    
+
+</nav>
+
+<main>
+
+  <article class="user__profile">
+
+      <!--foto do usuario-->
+      <div class="user__image">
+      <img id="image" alt="" class="user__image">
+      </div>
+    
+      <!--informações pessoais-->
+      <div class="user__infos">
+        <p id="name" class="user__name"></p>
+        <p id="username" class="user__username"></p>
+        <p id ="description" class="user__description-profile"></p>
+      </div>
+
+      <!--informações de repositórios e seguidores-->
+      <div class="user__stats">
+        <div class="user__followers">
+          <img src="./img/icon-followers (2).png" alt="" class="user__followers-icon">
+          <p id="followers"></p> <!--vamos puxar da api-->
+        </div>
+  
+        <div class="user__repository">
+          <img src="./img/icon-repository.png" alt="" class="user__repository-icon">
+          <p id="repositories" class="user__repository-number"></p> <!--vamos puxar da api-->
+        </div>      
+      </div>
+
+  </article>
+  
+</main>
+
+
+<footer class="footer">
+  <h1 class="footer__text-credits">Desenvolvido por</p><a href="https://github.com/allanina" class="footer__text"> Allana Evellyn</a> e </p><a href="https://github.com/TEUUSUARIOAQUI" class="footer__text"> Nadja </a>
+</footer>
+
+<script src="./js/app.js"></script>
+
+</body>
+</html>
